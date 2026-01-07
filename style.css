@@ -537,3 +537,112 @@ model-viewer {
     background-color: #e74c3c;
     color: white;
 }
+
+/* --- RESPONSIVE CHO THIẾT BỊ DI ĐỘNG --- */
+
+@media (max-width: 768px) {
+    /* 1. Header & Navigation */
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .menu-item {
+        font-size: 1rem;
+        padding: 5px 10px;
+    }
+
+    /* 2. Hero Section */
+    .hero-section {
+        height: 60vh; /* Giảm chiều cao trên mobile */
+    }
+
+    .artifact-title {
+        font-size: 1.8rem;
+    }
+
+    /* 3. Lưới ảnh sự kiện (Chuyển từ 2 cột thành 1 cột) */
+    .events-grid {
+        grid-template-columns: 1fr;
+        padding: 0 20px;
+    }
+
+    /* 4. Phản hồi khách hàng */
+    .testimonials-container {
+        padding: 0 20px;
+    }
+
+    .testimonial-card {
+        width: 100%; /* Chiếm hết chiều ngang */
+        box-sizing: border-box;
+    }
+
+    /* 5. Trang chi tiết hiện vật (Xếp chồng thay vì song song) */
+    .artifact-container {
+        flex-direction: column;
+        height: auto; /* Cho phép cuộn trang tự nhiên */
+    }
+
+    .viewer-section {
+        height: 350px; /* Cố định chiều cao khu vực 3D trên mobile */
+    }
+
+    .info-section-artifact {
+        padding: 20px;
+        border-left: none;
+        border-top: 1px solid #444;
+    }
+
+    /* 6. Danh sách hiện vật 3D (Chuyển từ 3 cột thành 1 hoặc 2 cột) */
+    .grid-container-3d {
+        grid-template-columns: 1fr; /* 1 cột trên điện thoại nhỏ */
+        gap: 20px;
+    }
+
+    /* 7. Footer */
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-left h3, .footer-right h3 {
+        border-left: none;
+        border-bottom: 2px solid #ffcc00;
+        display: inline-block;
+        padding-left: 0;
+        padding-bottom: 5px;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+    .form-group input {
+        width: 100%; /* Ô nhập liệu dài hết màn hình */
+    }
+
+    /* 8. Nút "Xem thêm" mờ mờ */
+    .see-more-btn {
+        bottom: 20px;
+        right: 20px;
+        font-size: 0.8rem;
+    }
+}
+
+/* Tối ưu riêng cho điện thoại rất nhỏ (iPhone SE, v.v.) */
+@media (max-width: 480px) {
+    .grid-container-3d {
+        grid-template-columns: 1fr;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+}
