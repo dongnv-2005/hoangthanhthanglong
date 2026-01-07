@@ -540,6 +540,14 @@ model-viewer {
 
 /* --- RESPONSIVE CHO THIẾT BỊ DI ĐỘNG --- */
 
+.menu-checkbox {
+    display: none !important; /* Luôn luôn ẩn ô vuông này */
+}
+
+.hamburger {
+    display: none; /* Mặc định ẩn nút 3 gạch trên máy tính */
+}
+
 @media (max-width: 768px) {
     /* 1. Cấu hình lại Header */
     .navbar {
@@ -768,4 +776,95 @@ model-viewer {
         width: 100%;
         text-align: center;
     }
+}
+
+@media (max-width: 768px) {
+    /* 1. Chuyển container từ Flex-row sang Flex-column */
+    .artifact-container {
+        flex-direction: column;
+        height: auto; /* Bỏ cố định chiều cao 100vh để có thể cuộn trang */
+    }
+
+    /* 2. Khu vực xem 3D nằm ở trên */
+    .viewer-section {
+        flex: none;
+        width: 100%;
+        height: 45vh; /* Chiếm 45% chiều cao màn hình để xem mẫu 3D */
+        position: sticky; /* Tùy chọn: Giữ mẫu 3D ở trên cùng khi cuộn (nếu muốn) */
+        top: 0;
+        z-index: 5;
+    }
+
+    /* 3. Khu vực thông tin nằm ở dưới */
+    .info-section-artifact {
+        flex: none;
+        width: 100%;
+        padding: 25px 20px;
+        background-color: #1a1a1a;
+        border-left: none; /* Bỏ viền dọc cũ */
+        border-top: 1px solid #333; /* Thêm viền ngăn cách phía trên */
+    }
+
+    /* 4. Tối ưu chữ và khoảng cách */
+    .artifact-title {
+        font-size: 1.8rem;
+        margin-top: 10px;
+    }
+
+    .artifact-meta {
+        flex-direction: column; /* Meta thông tin xếp dọc */
+        gap: 8px;
+        font-size: 0.85rem;
+    }
+
+    /* 5. Nút Voice AI */
+    .voice-controls {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+
+    .speak-btn {
+        flex: 1; /* Cho 2 nút nghe/dừng chia đều chiều rộng */
+        padding: 12px 5px;
+        font-size: 0.85rem;
+        justify-content: center;
+    }
+
+    /* 6. Danh sách chi tiết hiện vật */
+    .artifact-details li {
+        font-size: 0.95rem;
+        padding: 12px 0;
+    }
+
+    /* 7. Nút quay lại */
+    .back-btn {
+        display: block;
+        text-align: center;
+        background: #333;
+        padding: 15px;
+        border-radius: 8px;
+        margin-top: 30px;
+    }
+}
+
+/* Đảm bảo Menu Hamburger hoạt động trên trang này */
+@media (max-width: 768px) {
+    .menu {
+        display: flex;
+        flex-direction: column;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease;
+        background: #222;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+    }
+    .menu-checkbox:checked ~ .menu {
+        max-height: 300px;
+    }
+    .hamburger { display: flex !important; }
 }
