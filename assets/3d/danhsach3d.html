@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,27 +8,38 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="/style.css">
 </head>
+
 <body>
 
     <header class="navbar">
         <div class="logo">
-            <a href="/index.html"><img src="/images/logo-white.png" alt="Logo" style="height: 70px;"></a>
+            <a href="/index.html">
+                <img src="/images/logo-white.png" alt="Logo" style="height: 60px;">
+            </a>
         </div>
+
+        <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+
+        <label for="menu-toggle" class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
         <nav class="menu">
             <a href="/index.html" class="menu-item">Trang chủ</a>
             <a href="/assets/gioithieu/httl.html" class="menu-item">Giới thiệu</a>
-            <a href="danhsach3d.html" class="menu-item">3D</a>
+            <a href="/assets/3d/danhsach3d.html" class="menu-item">3D</a>
             <a href="#map-section" class="menu-item">Liên hệ</a>
         </nav>
     </header>
-
     <section class="list-hero-3d">
         <h1>BẢO TÀNG SỐ 3D</h1>
         <p>Chiêm ngưỡng tinh hoa di sản qua công nghệ quét 3D chi tiết</p>
     </section>
 
     <main class="grid-container-3d">
-        
+
         <div class="artifact-card">
             <div class="card-thumb">
                 <img src="/images/rong.png" alt="Thành bậc Điện Kính Thiên thời Lê Trung Hưng">
@@ -120,7 +132,7 @@
 
     </main>
 
-        <section class="map-section" id="map-section">
+    <section class="map-section" id="map-section">
         <div class="map-container">
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3723.9365361995056!2d105.8402535!3d21.0352252!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135aba3381d7c49%3A0xb521a7d98f582937!2zSG_DoG5nIFRow6BuaCBUaMSDbmcgTG9uZw!5e0!3m2!1svi!2s!4v1767623047251!5m2!1svi!2s"
@@ -172,4 +184,5 @@
     </footer>
 
 </body>
+
 </html>
