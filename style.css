@@ -706,7 +706,7 @@ model-viewer {
 
     /* --- 3. Trang Giới thiệu (HTTL) --- */
     .hero-section {
-        height: auto !important; /* Hủy bỏ 200px cố định trên mobile */
+        height: 80vh !important; /* Hủy bỏ 200px cố định trên mobile */
         padding: 40px 10px;
         margin-top: 0;
     }
