@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
             alert("Cảnh báo: Máy tính của bạn thiếu gói 'Giọng đọc tiếng Việt'. Trình duyệt sẽ cố đọc bằng giọng mặc định.");
         }
 
-        utterance.rate = 0.8; 
+        utterance.rate = 1.0; 
         utterance.pitch = 1.2;
 
         // Xử lý giao diện nút bấm
