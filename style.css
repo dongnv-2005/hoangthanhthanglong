@@ -781,6 +781,7 @@ model-viewer {
 @media (max-width: 768px) {
     /* 1. Chuyển container từ Flex-row sang Flex-column */
     .artifact-container {
+        display: block;
         flex-direction: column;
         height: auto; /* Bỏ cố định chiều cao 100vh để có thể cuộn trang */
     }
@@ -790,7 +791,7 @@ model-viewer {
         flex: none;
         width: 100%;
         height: 45vh; /* Chiếm 45% chiều cao màn hình để xem mẫu 3D */
-        position: sticky; /* Tùy chọn: Giữ mẫu 3D ở trên cùng khi cuộn (nếu muốn) */
+        position: relative; /* Tùy chọn: Giữ mẫu 3D ở trên cùng khi cuộn (nếu muốn) */
         top: 0;
         z-index: 5;
     }
