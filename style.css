@@ -796,6 +796,22 @@ model-viewer {
         z-index: 5;
     }
 
+    .viewer-section {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        height: 400px; /* Tăng chiều cao một chút cho đẹp */
+        background: #000; /* Màu nền đen để hòa nhập nếu iframe chưa tải kịp */
+    }
+
+    /* Đảm bảo iframe bên trong không bị hở lề */
+    .viewer-section iframe {
+        width: 100% !important;
+        height: 100% !important;
+        display: block;
+        border: none;
+    }
+
     /* 3. Khu vực thông tin nằm ở dưới */
     .info-section-artifact {
         flex: none;
